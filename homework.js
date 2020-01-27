@@ -30,7 +30,6 @@ function isOdd (number){
     }
 }
 isOdd(3);
-// WHY IS THIS NOT WORKING?!//
 
 
 // 5. Create a function called isEven that, given a number, will
@@ -140,3 +139,27 @@ function multigreeting(name, language){
 
 // Write a function called gcd that takes two arguments and returns the greatest common
 // divisor using the instructions above.
+
+// While loops for this one^
+
+// let numOne = 10
+// let numTwo = 25
+
+function gcd(a,b){
+    let d=0;
+    while ((a%2)===0 && (b%2)===0){
+            a=a/2;
+            b=b/2;
+            d=d+1;
+        } while (a!=b){
+            if((a%2)===0){
+                a=a/2;
+            } else if ((b%2)===0){
+                b=b/2;
+            } else if (a>b){
+                a=(a-b)/2;
+            } else {
+                b=(b-a)/2;
+            }
+    } return a*2**d;
+}
